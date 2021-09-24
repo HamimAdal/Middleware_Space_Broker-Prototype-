@@ -19,14 +19,14 @@ interface characteristicsInterface
 class Characteristics   implements characteristicsInterface
 {
     // *****************
-    // CMD is the string or message which will be sent  to the space broker from the application which consists
+    // 'string_message' is the string or message which will be sent  to the space broker from the application which consists
     // 1. requestType and/or
     // 2. location and/or
     // 3. value
     // *****************
 
     public static String requestType ;
-    public static String CMD;
+    public static String string_message;
     String queriedValue= "";
 
 
@@ -36,9 +36,9 @@ class Characteristics   implements characteristicsInterface
 
         requestType = "1";
 
-        CMD = requestType + ":" + location.X + ":" + location.Y ;
+        string_message = requestType + ":" + location.X + ":" + location.Y ;
         wirelessCommunication wirelesscommunication = new wirelessCommunication();
-        wirelesscommunication.execute(CMD);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
+        wirelesscommunication.execute(string_message);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
 
         try
         {
@@ -61,9 +61,9 @@ class Characteristics   implements characteristicsInterface
 
         requestType = "4";
 
-        CMD = requestType + ":" + location.X + ":" + location.Y ;
+        string_message = requestType + ":" + location.X + ":" + location.Y ;
         wirelessCommunication wirelesscommunication = new wirelessCommunication();
-        wirelesscommunication.execute(CMD);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
+        wirelesscommunication.execute(string_message);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
 
         try
         {
@@ -87,9 +87,9 @@ class Characteristics   implements characteristicsInterface
 
         requestType = "2";
 
-        CMD = requestType + ":" + location.X + ":" + location.Y + ":" + Value;
+        string_message = requestType + ":" + location.X + ":" + location.Y + ":" + Value;
         wirelessCommunication wirelesscommunication = new wirelessCommunication();
-        wirelesscommunication.execute(CMD);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
+        wirelesscommunication.execute(string_message);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
 
 
 
@@ -104,9 +104,9 @@ class Characteristics   implements characteristicsInterface
 
         requestType = "5";
 
-        CMD = requestType + ":" + location.X + ":" + location.Y + ":" + Value;
+        string_message = requestType + ":" + location.X + ":" + location.Y + ":" + Value;
         wirelessCommunication wirelesscommunication = new wirelessCommunication();
-        wirelesscommunication.execute(CMD);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
+        wirelesscommunication.execute(string_message);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
 
     }
 
@@ -118,9 +118,9 @@ class Characteristics   implements characteristicsInterface
 
         requestType = "3";
 
-        CMD = requestType + ":" + location.X + ":" + location.Y + ":" + Value;
+        string_message = requestType + ":" + location.X + ":" + location.Y + ":" + Value;
         wirelessCommunication wirelesscommunication = new wirelessCommunication();
-        wirelesscommunication.execute(CMD);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
+        wirelesscommunication.execute(string_message);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
 
     }
 
@@ -131,9 +131,9 @@ class Characteristics   implements characteristicsInterface
 
         requestType = "6";
 
-        CMD = requestType + ":" + location.X + ":" + location.Y + ":" + Value;
+        string_message = requestType + ":" + location.X + ":" + location.Y + ":" + Value;
         wirelessCommunication wirelesscommunication = new wirelessCommunication();
-        wirelesscommunication.execute(CMD);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
+        wirelesscommunication.execute(string_message);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
 
     }
 

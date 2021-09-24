@@ -20,9 +20,9 @@ class wirelessCommunication extends AsyncTask<String,Void,Void>
     protected Void doInBackground(String... arg)
     {
 
-        String CMD = arg[0];
+        String string_message = arg[0];
 
-        String arr[] = CMD.split(":");
+        String arr[] = string_message.split(":");
 
 
         String requestID =  arr[0] ;
@@ -35,7 +35,7 @@ class wirelessCommunication extends AsyncTask<String,Void,Void>
 
 
             DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
-            dataOutputStream.writeUTF(CMD);
+            dataOutputStream.writeUTF(string_message);
             dataOutputStream.flush();
 
 
