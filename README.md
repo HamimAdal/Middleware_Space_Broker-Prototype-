@@ -15,9 +15,19 @@ real physical devices.
 # Getting Started
 
 This is the repository which holds code both for the 'Space Broker' API and the Space Broker 'middleware' that was built on the raspberry-pi. 
+To run the Space Broker Server, run main from Broker_RaspberryPi/server.py.
 
-To run the Space Broker Server, run main from src/SwingComponents/InitialPrompt.java.
+# Test
 
-# Test and simulation.
+Space Broker API:
+
+Space Broker System (built on Raspberry-Pi):
+
+# Demonstration
+
+Following are video links of the demonstration of this project:
+
+---- https://www.youtube.com/watch?v=-L-g3scnlGY
+---- https://www.youtube.com/watch?v=WUGQ4JW9Wbs
 
 
