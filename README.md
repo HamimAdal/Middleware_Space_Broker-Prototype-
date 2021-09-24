@@ -24,7 +24,7 @@ After the Space Broker server is up and running, it is ready to take any command
 
 So far three kind of methods have been examined: query, modify and maintain. All the methods have been tested for both Specific Location and User Location. 
 
-An overhead camera was used to track a green ball, which is our proxy for the user in the small scaled environment. So, the overhead camera feeds the space broker with the user location. For the user to point to any speciofic location, he/she has to download a map (floor plan), which is the 2D top view of the floor plan captured also by the overheasd camera. By clciking on the floorplan, a user can spot any location.
+An overhead camera was used to track a red card (an alternate to the real user, later we swapped that with a green ball which was easy to work with; the updated code will be uploaded soon), which is our proxy for the user in the small scaled environment. So, the overhead camera feeds the space broker with the user location. For the user to point to any speciofic location, he/she has to download a map (floor plan), which is the 2D top view of the floor plan captured also by the overhead camera. By clciking on the floorplan, a user can spot any location.
 
 In our source code for the Space Broker application, the application developer can use any of the following methods (from Android_Application/app/src/main/java/com/example/illuminationmodify/spaceBrokerProxy.java) to make a request to the Space Broker system (built on raspberry-pi):
 
@@ -46,7 +46,7 @@ The Space Broker system was built on the raspberry-pi. The devices and sensors w
 
 # Video Demonstration
 
-Following are video links of this project when Space Broker is up and running (we used a red card, as a proxy to the user in the videos, later we shifted that with a green ball which was easy to work with, the updated code will be uploaded soon):
+Following are video links of this project when Space Broker is up and running:
 
 ---- https://www.youtube.com/watch?v=-L-g3scnlGY (for specific location)
 
