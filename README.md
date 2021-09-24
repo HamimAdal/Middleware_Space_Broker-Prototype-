@@ -25,7 +25,7 @@ So far three kind of methods have been examined: query, modify, maintain. All th
 
 We used an overhead camera to track a green ball (we considered that as a user in our small scaled environment), which is our proxy for the user. SO the overheads camera used to feed the space broker the user location. For the user to point to any speciofic location, he/she had to download a map (floor plan) which is the 2D top view of the floor plan. By clciking on the floorplan, a user can spot any location.
 
-In our source code for the Space Broker application, the application developoer can use any of the following methods (from spaceBrokerProxy.java) to make a request to the Space Broker system (built on raspberry-pi):
+In our source code for the Space Broker application, the application developoer can use any of the following methods (from spaceBrokerProxy.java in the Android_Application folder) to make a request to the Space Broker system (built on raspberry-pi):
 
 
     String query( SpecificLocation  location );
@@ -37,8 +37,9 @@ In our source code for the Space Broker application, the application developoer 
     void maintain( SpecificLocation location,String Value);
     void maintain(  UserLocation location,String Value);
 
-After one of these methods is invoked in the Space Broker Application, the similar method (from server.py ) in the Space Broker system gets trigerred to deploy action   
+After one of these methods is invoked in the Space Broker Application, the similar named method (from server.py in the Broker_RaspberryPi folder) in the Space Broker system gets trigerred to deploy any action.   
 
+Space Broker system (built on raspberry-pi):
 
 
 # Video Presentation
