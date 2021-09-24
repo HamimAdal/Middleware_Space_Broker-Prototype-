@@ -86,8 +86,8 @@ When the user is in Space 1, the LED1, LED2, and LDR1 become operational and att
     <td>Figure 5: 850 unit of illumination achieved at the user location.</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/modifybefore.jpg" width=400 height=300></td>
-    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/modifyafter.jpg" width=400 height=300></td>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/modifybefore.png" width=400 height=300></td>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/modifyafter.png" width=400 height=300></td>
  
   </tr>
 </table>
