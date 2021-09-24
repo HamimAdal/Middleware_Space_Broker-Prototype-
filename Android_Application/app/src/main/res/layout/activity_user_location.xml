@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        tools:context="com.example.illuminationmodify.MainActivity">
+
+
+
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raspberry IP Address and port number" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="10.0.0.32:21567"
+            android:ems="10"
+            android:layout_marginTop="16dp"
+            android:id="@+id/ipAddress"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+
+        <Button
+            android:id="@+id/btnqueryuserlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnModify"
+            android:layout_below="@+id/btnModify"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="96dp"
+            android:text="QUERY WITH USER LOCATION" />
+
+        <TextView
+            android:id="@+id/queryuserlocationvalue"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ipAddress"
+            android:layout_marginStart="00dp"
+            android:layout_marginTop="105dp"
+            />
+
+        <EditText
+            android:id="@+id/modifyvalueuserlocation"
+            android:layout_width="276dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+
+            android:layout_marginEnd="89dp"
+            android:layout_marginStart="00dp"
+            android:layout_marginTop="200dp"
+            android:ems="10"
+            android:hint="Enter Value"
+            android:inputType="textPersonName" />
+
+
+
+        <Button
+            android:id="@+id/btnModifyuserlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnModify"
+            android:layout_below="@+id/btnModify"
+            android:layout_marginStart="00dp"
+            android:layout_marginTop="276dp"
+            android:text="MODIFY WITH USER LOCATION" />
+
+
+        <EditText
+            android:id="@+id/maintainvalueuserLocation"
+            android:layout_width="276dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+
+            android:layout_marginEnd="89dp"
+            android:layout_marginStart="00dp"
+            android:layout_marginTop="350dp"
+            android:ems="10"
+            android:hint="Enter Value"
+            android:inputType="textPersonName" />
+
+
+        <Button
+            android:id="@+id/btnMaintainuserLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnModify"
+            android:layout_below="@+id/btnModify"
+            android:layout_marginStart="00dp"
+            android:layout_marginTop="410dp"
+            android:text="MAINTAIN WITH USER LOCATION" />
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
+

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        tools:context="com.example.illuminationmodify.MainActivity">
+
+
+
+
+        <Button
+            android:id="@+id/btnUserLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnModify"
+            android:layout_below="@+id/btnModify"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="200dp"
+            android:text="USER LOCATION" />
+
+
+
+
+        <Button
+            android:id="@+id/btnSpecificLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnModify"
+            android:layout_below="@+id/btnModify"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="280dp"
+            android:text="SPECIFIC LOCATION" />
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
