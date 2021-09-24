@@ -28,7 +28,7 @@ An overhead camera was used to track a red card (an alternate to the real user, 
 
 <table>
   <tr>
-    <td>Screenshot of the Appllication</td>
+    <td>Figure 1: Screenshot of the Appllication</td>
   </tr>
   <tr>
     <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/appscreenshot.jpg" width=800 height=400></td>
@@ -56,8 +56,8 @@ The Space Broker system was built on the raspberry-pi. The devices and sensors w
 
 <table>
   <tr>
-    <td>Architecture of the floorplan</td>
-    <td>Captured picture from the overhead camera</td>
+    <td>Figure 2: Architecture of the floorplan</td>
+    <td>Figure 3: Captured picture from the overhead camera</td>
   </tr>
   <tr>
     <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/floorplan.jpg" width=400 height=300></td>
@@ -66,7 +66,10 @@ The Space Broker system was built on the raspberry-pi. The devices and sensors w
   </tr>
 </table>
 
-Figure 7 demonstrates a use case scenario illustrating what happens when a user uses the Space Broker Application to launch a request at his/her location. The size of the camera frame shown in the figure is approximately 500 × 480 grid. To keep things simple, the entire space was divided  into four regions: Space 1, Space 2, Space 3, and Space 4. Table 1 provides the inkling of the space partitions along with LED devices and LDR sensors associated with each region. For a better understanding, we can relate the environment setup with Figure 4, which provides the architectural layout of the floor plan labeling each component used in the experiment along with the space split-ups.
+The Home Screen (Figure 1) has two different options: the ‘User Location’ button and the ‘Specific Location’ button.
+Clicking on the ‘User Location’ button in the Home Screen will take the user into the User Location Screen, where he/she will be able to query, modify or maintain the value of the illumination at his/her location. Querying the value of illumination requires the user to press the ‘Query with user location’ button, and as a response, the queried result gets displayed on the screen. But requesting to modify or maintain illumination at the user location requires the user to provide the desired value in the input fields before pressing the corresponding buttons assigned for it. For each of the methods, the user location is continuously retrieved by the application from the ‘Localization Service’ using the ‘Locator’ object on the personal device.
+
+Figure 4 and 5 demonstrates a use case scenario illustrating what happens when a user uses the Space Broker Application to launch a request at his/her location. The size of the camera frame shown in the figure is approximately 500 × 480 grid. To keep things simple, the entire space was divided  into four regions: Space 1, Space 2, Space 3, and Space 4. Table 1 provides the inkling of the space partitions along with LED devices and LDR sensors associated with each region. For a better understanding, we can relate the environment setup with Figure 4, which provides the architectural layout of the floor plan labeling each component used in the experiment along with the space split-ups.
 
 | Region | Space Coverage (x,y denotes horizontal and vertical pixels of the camera frame) |Assigned devices |
 | :---: | :---: | :---: |
@@ -79,17 +82,19 @@ When the user is in Space 1, the LED1, LED2, and LDR1 become operational and att
 
 <table>
   <tr>
-    <td>Architecture of the floorplan</td>
-    <td>Captured picture from the overhead camera</td>
+    <td>Figure 4: An attempt to achieve 850 unit of illumination at the user location.</td>
+    <td>Figure 5: 850 unit of illumination achieved at the user location.</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/floorplan.jpg" width=400 height=300></td>
-    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg" width=400 height=300></td>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/modifybefore.jpg" width=400 height=300></td>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/modifyafter.jpg" width=400 height=300></td>
  
   </tr>
 </table>
 
-We will now use Figure 7 to manifest an interaction between the user and the Space Broker where a user asks the Space Broker to modify illumination at his/her location. Suppose a user (the green ball) desires to achieve 850 units of illumination at his/her user location. The ‘Localization Service’, which has access to the overhead camera, detects the green ball avatar in Space 4 (X= 454, Y= 84, which falls in the Space 4 region). Subsequently, the application uses the ‘Locator’ object on the personal device to retrieve the user location from the ‘Localization Service’. When a user puts the value of 850 as an input in the User Location Screen and presses the ‘Modify With User Location’ button, both the user location and the value gets passed from the application to the Space Broker (via invoking the proxy method, in this case ‘modify’ method in Table 1), setting off the identically named method in the Space Broker. As a result, LED7 and LED8 become functional in Space 4 (in Figure 7(a)), attempting to reach the target of 850 units of illumination. In Figure 7(b), we can see that the intended amount of 850 units has been achieved when LED7 is at its maximum capacity (100 unit), and LED8  reaches the value of 90 unit. Querying and maintaining an illumination level is also achieved in the same way with an exception for the maintenance request, where the application has to continuously feed the Space Broker with user’s current position in order to maintain a constant luminance level around him/her.
+We will now use Figure 4 and 5 to manifest an interaction between the user and the Space Broker where a user asks the Space Broker to modify illumination at his/her location. Suppose a user (the green ball) desires to achieve 850 units of illumination at his/her user location. The ‘Localization Service’, which has access to the overhead camera, detects the green ball avatar in Space 4 (X= 454, Y= 84, which falls in the Space 4 region). Subsequently, the application uses the ‘Locator’ object on the personal device to retrieve the user location from the ‘Localization Service’. When a user puts the value of 850 as an input in the User Location Screen and presses the ‘Modify With User Location’ button, both the user location and the value gets passed from the application to the Space Broker (via invoking the proxy method, in this case ‘modify’ method in Table 1), setting off the identically named method in the Space Broker. As a result, LED7 and LED8 become functional in Space 4 (in Figure 7(a)), attempting to reach the target of 850 units of illumination. In Figure 7(b), we can see that the intended amount of 850 units has been achieved when LED7 is at its maximum capacity (100 unit), and LED8  reaches the value of 90 unit. Querying and maintaining an illumination level is also achieved in the same way with an exception for the maintenance request, where the application has to continuously feed the Space Broker with user’s current position in order to maintain a constant luminance level around him/her.
+
+To initiate  user requests regarding Specific Locations, a user needs to enter into the Specific Location Screen by pressing the ‘Specific Location’ button from the Home Screen. In the Specific Location Screen, a user can request to display the top view image of the 2D space by pressing the ‘Show the Space’ button. By tapping on the space image displayed, a user will be able to set the location which he/she wants to query, modify, or maintain a value for illumination. After selecting the desired spot (for example, X=349, Y=118 as shown in Figure 6) from the space image, a user needs to provide values in the corresponding input fields before pressing the designated buttons assigned for modifying or maintaining illumination. Querying for illumination only requires the user to press the ‘Query With Specific Location’ button, and as a consequence, the queried value is displayed on the screen.
 
 
 # Video Demonstration
