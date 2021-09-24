@@ -67,8 +67,8 @@ Following are video links of this project when Space Broker is up and running:
      <td>Captured picture from the overhead camera</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/floorplan.jpg" width=500 height=300></td>
-    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg" width=500 height=300></td>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/floorplan.jpg" width=400 height=300></td>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg" width=400 height=300></td>
  
   </tr>
  </table>
