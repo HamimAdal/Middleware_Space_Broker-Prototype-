@@ -46,10 +46,16 @@ The Space Broker system was built on the raspberry-pi. The devices and sensors w
 
 # Video Demonstration
 
-Following are video links of this project when Space Broker is up and running (we used a red card, as a proxy to the user in the videos, later we shifted that with a green ball which was easy to work with):
+Following are video links of this project when Space Broker is up and running (we used a red card, as a proxy to the user in the videos, later we shifted that with a green ball which was easy to work with, the updated code will be uploaded soon):
 
 ---- https://www.youtube.com/watch?v=-L-g3scnlGY (for specific location)
 
 ---- https://www.youtube.com/watch?v=WUGQ4JW9Wbs (for user location)
+
+# Work References
+
+---- https://pysource.com/2019/06/05/control-webcam-with-servo-motor-and-raspberry-pi-opencv-with-python/
+---- https://github.com/trieutuanvnu/AndroidWifiRasPi
+---- https://github.com/trieutuanvnu/PiServoControlWifi
 
 
