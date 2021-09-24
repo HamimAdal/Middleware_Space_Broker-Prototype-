@@ -60,4 +60,5 @@ Following are video links of this project when Space Broker is up and running:
 
 ---- https://github.com/trieutuanvnu/PiServoControlWifi
 
-![alt text](https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg?raw=true)
+
+![Foam Core Box](https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg?raw=true)
