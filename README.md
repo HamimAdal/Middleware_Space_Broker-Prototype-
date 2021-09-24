@@ -28,15 +28,13 @@ An overhead camera was used to track a red card (an alternate to the real user, 
 
 <table>
   <tr>
-    <td>Architecture of the floorplan</td>
-    <td>Captured picture from the overhead camera</td>
+    <td>Screenshot of the Appllication</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/floorplan.jpg" width=400 height=300></td>
-    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg" width=400 height=300></td>
- 
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/usermanual.jpg" width=800 height=400></td>
   </tr>
 </table>
+
 
 In our source code for the Space Broker application, the application developer can use any of the following methods (from Android_Application/app/src/main/java/com/example/illuminationmodify/spaceBrokerProxy.java) to make a request to the Space Broker system (built on raspberry-pi):
 
@@ -55,6 +53,18 @@ After one of these methods is invoked in the Space Broker Application, the simil
 **Space Broker system (built on raspberry-pi)**
 
 The Space Broker system was built on the raspberry-pi. The devices and sensors we used include but not limited to LEDs, Light sensors, cooling fan, temperaure sensors, raspberry-pi camera etc. The implementation of the query, modify and maintain methods can be found in the Broker_RaspberryPi/query.py, Broker_RaspberryPi/modify.py and Broker_RaspberryPi/maintain.py  (Broker_RaspberryPi/queryspecific.py, Broker_RaspberryPi/modifyspecific.py, Broker_RaspberryPi/maintainspecific.py for the specific locations) respectively (for the user lcoation). The fucntionalities for the overhead camera can be found in the Broker_RaspberryPi/location.py file. 
+
+<table>
+  <tr>
+    <td>Architecture of the floorplan</td>
+    <td>Captured picture from the overhead camera</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/floorplan.jpg" width=400 height=300></td>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg" width=400 height=300></td>
+ 
+  </tr>
+</table>
 
 # Video Demonstration
 
