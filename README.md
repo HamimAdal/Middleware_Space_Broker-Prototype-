@@ -22,11 +22,11 @@ After the Space Broker server is up and running, it is ready to take any command
 
 **Space Broker API**
 
-So far three kind of methods have been examined: query, modify, maintain. All the methods have been tested for both Specific Location and User Location. 
+So far three kind of methods have been examined: query, modify and maintain. All the methods have been tested for both Specific Location and User Location. 
 
-An overhead camera was used to track a green ball, which is our proxy for the user in the small scaled environment. SO the overheads camera used to feed the space broker the user location. For the user to point to any speciofic location, he/she had to download a map (floor plan) which is the 2D top view of the floor plan. By clciking on the floorplan, a user can spot any location.
+An overhead camera was used to track a green ball, which is our proxy for the user in the small scaled environment. So, the overhead camera feeds the space broker with the user location. For the user to point to any speciofic location, he/she has to download a map (floor plan), which is the 2D top view of the floor plan captured also by the overheasd camera. By clciking on the floorplan, a user can spot any location.
 
-In our source code for the Space Broker application, the application developoer can use any of the following methods (from spaceBrokerProxy.java in the Android_Application folder) to make a request to the Space Broker system (built on raspberry-pi):
+In our source code for the Space Broker application, the application developer can use any of the following methods (from spaceBrokerProxy.java in the 'Android_Application' folder) to make a request to the Space Broker system (built on raspberry-pi):
 
 
     String query( SpecificLocation  location );
@@ -42,7 +42,7 @@ After one of these methods is invoked in the Space Broker Application, the simil
 
 **Space Broker system (built on raspberry-pi)**
 
-The Space Broker system was built on the raspberry-pi. The devices and sensors we used include but not limited to LEDs, Light sensors, cooling fan, temperaure sensors, raspberry-pi camera etc. The implementation of the query, modify, maintain methods can be found in the Broker_RaspberryPi folder named query.py, modify.py and maintain.py respectivel (queryspecific.py, modifyspecific.py, maintainspecific.py for the specific locations) respectively (for the user lcoation). The fucntionalities for the overhead camera can be found from the location.py file. 
+The Space Broker system was built on the raspberry-pi. The devices and sensors we used include but not limited to LEDs, Light sensors, cooling fan, temperaure sensors, raspberry-pi camera etc. The implementation of the query, modify, maintain methods can be found in the 'Broker_RaspberryPi' folder named query.py, modify.py and maintain.py  (queryspecific.py, modifyspecific.py, maintainspecific.py for the specific locations) respectively (for the user lcoation). The fucntionalities for the overhead camera can be found in the location.py file. 
 
 # Video Presentation
 
