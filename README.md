@@ -42,7 +42,7 @@ After one of these methods is invoked in the Space Broker Application, the simil
 
 **Space Broker system (built on raspberry-pi)**
 
-The Space Broker system was built on the raspberry-pi. The devices and sensors we used include but not limited to LEDs, Light sensors, cooling fan, temperaure sensors, raspberry-pi camera etc. The implementation of the query, modify, maintain methods can be found in the 'Broker_RaspberryPi' folder named query.py, modify.py and maintain.py  (queryspecific.py, modifyspecific.py, maintainspecific.py for the specific locations) respectively (for the user lcoation). The fucntionalities for the overhead camera can be found in the location.py file. 
+The Space Broker system was built on the raspberry-pi. The devices and sensors we used include but not limited to LEDs, Light sensors, cooling fan, temperaure sensors, raspberry-pi camera etc. The implementation of the query, modify, maintain methods can be found in the Broker_RaspberryPi/query.py, Broker_RaspberryPi/modify.py and Broker_RaspberryPi/maintain.py  (Broker_RaspberryPi/queryspecific.py, Broker_RaspberryPi/modifyspecific.py, Broker_RaspberryPi/maintainspecific.py for the specific locations) respectively (for the user lcoation). The fucntionalities for the overhead camera can be found in the Broker_RaspberryPi/location.py file. 
 
 # Video Presentation
 
