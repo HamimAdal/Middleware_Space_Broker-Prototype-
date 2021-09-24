@@ -29,8 +29,8 @@ An overhead camera was used to track a green ball, which is our proxy for the us
 In our source code for the Space Broker application, the application developer can use any of the following methods (from Android_Application/app/src/main/java/com/example/illuminationmodify/spaceBrokerProxy.java) to make a request to the Space Broker system (built on raspberry-pi):
 
 
-    String query (SpecificLocation  location );
-    String query (UserLocation location );
+    String query (SpecificLocation  location);
+    String query (UserLocation location);
 
     void modify (SpecificLocation location,String Value);
     void modify (UserLocation location,String Value);
