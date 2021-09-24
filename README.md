@@ -63,14 +63,13 @@ Following are video links of this project when Space Broker is up and running:
 
 <table>
   <tr>
-    <td>First Screen Page</td>
-     <td>Holiday Mention</td>
-     <td>Present day in purple and selected day in pink</td>
+    <td>Architecture of the floorplan</td>
+     <td>Captured picture from the overhead camera</td>
   </tr>
   <tr>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/floorplan.jpg" width=300 height=300></td>
     <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg" width=300 height=300></td>
-    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg" width=300 height=300></td>
-    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg" width=300 height=300></td>
+ 
   </tr>
  </table>
 
