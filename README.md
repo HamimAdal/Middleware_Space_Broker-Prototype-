@@ -48,7 +48,8 @@ The Space Broker system was built on the raspberry-pi. The devices and sensors w
 
 Following are video links of this project when Space Broker is up and running (we used a red card, as a proxy to the user in the videos, later we shifted that with a green ball which was easy to work with):
 
----- https://www.youtube.com/watch?v=-L-g3scnlGY
----- https://www.youtube.com/watch?v=WUGQ4JW9Wbs
+---- https://www.youtube.com/watch?v=-L-g3scnlGY (for specific location)
+
+---- https://www.youtube.com/watch?v=WUGQ4JW9Wbs (for user location)
 
 
