@@ -66,6 +66,32 @@ The Space Broker system was built on the raspberry-pi. The devices and sensors w
   </tr>
 </table>
 
+Figure 7 demonstrates a use case scenario illustrating what happens when a user uses the Space Broker Application to launch a request at his/her location. The size of the camera frame shown in the figure is approximately 500 × 480 grid. To keep things simple, the entire space was divided  into four regions: Space 1, Space 2, Space 3, and Space 4. Table 1 provides the inkling of the space partitions along with LED devices and LDR sensors associated with each region. For a better understanding, we can relate the environment setup with Figure 4, which provides the architectural layout of the floor plan labeling each component used in the experiment along with the space split-ups.
+
+| Region | Space Coverage (x,y denotes horizontal and vertical pixels of the camera frame) |Assigned devices |
+| :---: | :---: | :---: |
+| Space 1 | 0 ≤ x ≤ 250 and 241 ≤ y ≤ 480 | LED1, LED2, LDR1 |
+| Space 2 | 251 ≤ x ≤ 500 and 241 ≤ y ≤ 480 | LED3, LED4, LDR2 |
+| Space 3 | 0 ≤ x ≤ 250 and 0 ≤ y ≤ 240 | LED5, LED6, LDR3 |
+| Space 4 | 251 ≤ x ≤ 500 and 0 ≤ y ≤ 240 | LED7, LED8, LDR4 |
+
+When the user is in Space 1, the LED1, LED2, and LDR1 become operational and attempts to deliver the service. Similarly, LED3, LED4, and LDR2 are responsible for providing service in Space 2; LED5, LED6, and LDR3 in Space 3; LED7, LED8, and LDR4 in SPACE 4. Each of the LED devices has its value range between 0 to 100 (0 means the LED is turned off, and 100 means the LED is at its maximum capacity). Each of the LDR devices also has its own value range between 0 to 1000 units (0 means dark and 1000 means the maximum illumination level). When the designated LED devices fail to achieve the intended illumination level for a particular region, the other LED devices contribute to fulfilling the purpose. For example, If a user wants to have a ‘Z’ unit of illumination in Space 1, LED1 and LED2 will start operating to deliver the desired level of luminance. If both of the LEDs reach the maximum level of their capacity and yet fail to provide the intended luminosity level, then the nearest LEDs to Space 1 will contribute to fulfilling the request. Therefore, as there is no wall in between Space 1 and Space 2, LED3 and LED4 from Space 2 will start functioning to assist Space 1 in achieving the requested luminance level (we have not fed the implementation with any algorithm yet, so the LED devices were chosen in increasing order. i.e., LED1, LED2, LED3 … … LED7, LED8). 
+
+<table>
+  <tr>
+    <td>Architecture of the floorplan</td>
+    <td>Captured picture from the overhead camera</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/floorplan.jpg" width=400 height=300></td>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg" width=400 height=300></td>
+ 
+  </tr>
+</table>
+
+We will now use Figure 7 to manifest an interaction between the user and the Space Broker where a user asks the Space Broker to modify illumination at his/her location. Suppose a user (the green ball) desires to achieve 850 units of illumination at his/her user location. The ‘Localization Service’, which has access to the overhead camera, detects the green ball avatar in Space 4 (X= 454, Y= 84, which falls in the Space 4 region). Subsequently, the application uses the ‘Locator’ object on the personal device to retrieve the user location from the ‘Localization Service’. When a user puts the value of 850 as an input in the User Location Screen and presses the ‘Modify With User Location’ button, both the user location and the value gets passed from the application to the Space Broker (via invoking the proxy method, in this case ‘modify’ method in Table 1), setting off the identically named method in the Space Broker. As a result, LED7 and LED8 become functional in Space 4 (in Figure 7(a)), attempting to reach the target of 850 units of illumination. In Figure 7(b), we can see that the intended amount of 850 units has been achieved when LED7 is at its maximum capacity (100 unit), and LED8  reaches the value of 90 unit. Querying and maintaining an illumination level is also achieved in the same way with an exception for the maintenance request, where the application has to continuously feed the Space Broker with user’s current position in order to maintain a constant luminance level around him/her.
+
+
 # Video Demonstration
 
 Following are video links of this project when Space Broker is up and running:
