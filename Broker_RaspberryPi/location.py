@@ -20,8 +20,8 @@ def locateInitialize():
 	
 
 	cap = cv2.VideoCapture(0)
-	cap.set(3, 480)
-	cap.set(4, 360)
+	cap.set(3, 500)
+	cap.set(4, 480)
 
 	_, frame = cap.read()
 	rows, cols, _ = frame.shape
@@ -62,8 +62,8 @@ def locate():
         	objectDetection = 1       
         	break
     
-    	cv2.line(frame, (x_medium, 0), (x_medium, 360), (0, 255, 0), 2)
-   	cv2.line(frame, (0,y_medium), (480,y_medium), (0, 255, 0), 2)
+    	cv2.line(frame, (x_medium, 0), (x_medium, 480), (0, 255, 0), 2)
+   	cv2.line(frame, (0,y_medium), (500,y_medium), (0, 255, 0), 2)
     	cv2.imshow("Frame", frame)
     
     	key = cv2.waitKey(1)
@@ -71,7 +71,7 @@ def locate():
  
 
     	x = x_medium
-    	y = 360 - y_medium 
+    	y = 480 - y_medium 
     
    
     	if objectDetection ==  1:
