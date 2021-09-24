@@ -61,4 +61,16 @@ Following are video links of this project when Space Broker is up and running:
 ---- https://github.com/trieutuanvnu/PiServoControlWifi
 
 
-![Foam Core Box](https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg?raw=true)
+<table>
+  <tr>
+    <td>First Screen Page</td>
+     <td>Holiday Mention</td>
+     <td>Present day in purple and selected day in pink</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg" width=300 height=300></td>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg" width=300 height=300></td>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/foamcorebox.jpg" width=300 height=300></td>
+  </tr>
+ </table>
+
