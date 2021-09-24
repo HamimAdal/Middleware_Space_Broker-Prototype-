@@ -2,15 +2,14 @@
 
 Space Broker is a middleware that  works as a mediator between personal devices and physical IoT devices in a smart space to make the user experience more personalized. So far, the following tasks were accomplished:
 
----- We made a demonstration in a small-scale IoT environment based on the framework we have designed. We named the framework 'Space Broker'.
+---- We made a demonstration in a small-scale IoT environment (using foam core) based on the framework we have designed. We named the framework 'Space Broker'.
 
 ---- Two characteristics that include illumination and temperature have been tested in a limited-scaled IoT environment. 
 Currently, we are approaching towards designing the model for Security which will be implemented in the future.
 
----- We are using an android device as a personal device to facilitate our experiment so that a user can have a similar experience interacting with space when he/she is in a real IoT environment. 
+---- An android device was used as a personal device to facilitate our experiment so that a user can have a similar experience interacting with space when he/she is in a real IoT environment. 
 
----- The task of building the interface 'Space Broker', was accomplished on the Raspberry-pi where LEDs, sensors, cooling fans and other equipments were used as an alternative to 
-real physical devices.
+---- The task of building the interface 'Space Broker', was accomplished on the Raspberry-pi where LEDs, sensors, cooling fans and other equipments were used as an alternative to real physical devices.
 
 # Getting Started
 
@@ -20,10 +19,12 @@ To run the Space Broker Server, run main from Broker_RaspberryPi/server.py from 
 # Demonstration
 
 After the Space Broker server is up and running, it is ready to take any command from the Space Broker application.
-Space Broker API:
+
+**Space Broker API
+
 So far three kind of methods have been examined: query, modify, maintain. All the methods have been tested for both Specific Location and User Location. 
 
-We used an overhead camera to track a green ball (we considered that as a user in our small scaled environment), which is our proxy for the user. SO the overheads camera used to feed the space broker the user location. For the user to point to any speciofic location, he/she had to download a map (floor plan) which is the 2D top view of the floor plan. By clciking on the floorplan, a user can spot any location.
+An overhead camera was used to track a green ball, which is our proxy for the user in the small scaled environment. SO the overheads camera used to feed the space broker the user location. For the user to point to any speciofic location, he/she had to download a map (floor plan) which is the 2D top view of the floor plan. By clciking on the floorplan, a user can spot any location.
 
 In our source code for the Space Broker application, the application developoer can use any of the following methods (from spaceBrokerProxy.java in the Android_Application folder) to make a request to the Space Broker system (built on raspberry-pi):
 
@@ -39,9 +40,10 @@ In our source code for the Space Broker application, the application developoer 
 
 After one of these methods is invoked in the Space Broker Application, the similar named method (from server.py in the Broker_RaspberryPi folder) in the Space Broker system gets trigerred to deploy any action.   
 
-Space Broker system (built on raspberry-pi):
+**Space Broker system (built on raspberry-pi)
 
-The Space Broker system was built on the raspberry-pi. The devices and sensors we used include but not limited to LEDs, Light sensors, cooling fan and temperaure sensors etc. The implementation of the query, modify, maintain methods can be found from the    
+The Space Broker system was built on the raspberry-pi. The devices and sensors we used include but not limited to LEDs, Light sensors, cooling fan, temperaure sensors, raspberry-pi camera etc. The implementation of the query, modify, maintain methods can be found in the Broker_RaspberryPi folder named query.py, modify.py and maintain.py respectivel (queryspecific.py, modifyspecific.py, maintainspecific.py for the specific locations) respectively (for the user lcoation). The fucntionalities for the overhead camera can be found from the location.py file. 
+
 # Video Presentation
 
 Following are video links of this project when Space Broker is up and running (we used a red card, as a proxy to the user in the videos, later we shifted that with a green ball which was easy to work with):
