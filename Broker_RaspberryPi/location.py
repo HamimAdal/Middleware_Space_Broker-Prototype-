@@ -44,12 +44,12 @@ def locate():
     	_, frame = cap.read()
     	hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     
-    	            # green color
+    	            # red color
 
-    	low_green = np.array([161, 155, 84])
-    	high_green = np.array([179, 255, 255])
-    	green_mask = cv2.inRange(hsv_frame, low_green, high_green)
-    	_, contours, _ = cv2.findContours(green_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    	low_red = np.array([161, 155, 84])
+    	high_red = np.array([179, 255, 255])
+    	red_mask = cv2.inRange(hsv_frame, low_red, high_red)
+    	_, contours, _ = cv2.findContours(red_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     	contours = sorted(contours, key=lambda x:cv2.contourArea(x), reverse=True)
     	objectDetection = 0
 
