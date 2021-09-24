@@ -52,7 +52,7 @@ Following are video links of this project when Space Broker is up and running (w
 
 ---- https://www.youtube.com/watch?v=WUGQ4JW9Wbs (for user location)
 
-# Work References
+# Work Reference
 
 ---- https://pysource.com/2019/06/05/control-webcam-with-servo-motor-and-raspberry-pi-opencv-with-python/
 
