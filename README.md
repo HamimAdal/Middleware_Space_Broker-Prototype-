@@ -31,7 +31,7 @@ An overhead camera was used to track a red card (an alternate to the real user, 
     <td>Screenshot of the Appllication</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/usermanual.jpg" width=800 height=400></td>
+    <td><img src="https://github.com/HamimAdal/Middleware_Space_Broker/blob/main/appscreenshot.jpg" width=800 height=400></td>
   </tr>
 </table>
 
