@@ -26,7 +26,7 @@ So far three kind of methods have been examined: query, modify and maintain. All
 
 An overhead camera was used to track a green ball, which is our proxy for the user in the small scaled environment. So, the overhead camera feeds the space broker with the user location. For the user to point to any speciofic location, he/she has to download a map (floor plan), which is the 2D top view of the floor plan captured also by the overheasd camera. By clciking on the floorplan, a user can spot any location.
 
-In our source code for the Space Broker application, the application developer can use any of the following methods (from spaceBrokerProxy.java in the 'Android_Application' folder) to make a request to the Space Broker system (built on raspberry-pi):
+In our source code for the Space Broker application, the application developer can use any of the following methods (from Android_Application/app/src/main/java/com/example/illuminationmodify/spaceBrokerProxy.java) to make a request to the Space Broker system (built on raspberry-pi):
 
 
     String query( SpecificLocation  location );
