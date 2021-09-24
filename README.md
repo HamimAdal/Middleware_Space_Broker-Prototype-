@@ -60,4 +60,4 @@ Following are video links of this project when Space Broker is up and running:
 
 ---- https://github.com/trieutuanvnu/PiServoControlWifi
 
-
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/floorplan.jpg?raw=true)
