@@ -20,7 +20,7 @@ To run the Space Broker Server, run main from Broker_RaspberryPi/server.py from 
 
 After the Space Broker server is up and running, it is ready to take any command from the Space Broker application.
 
-**Space Broker API
+**Space Broker API**
 
 So far three kind of methods have been examined: query, modify, maintain. All the methods have been tested for both Specific Location and User Location. 
 
@@ -40,7 +40,7 @@ In our source code for the Space Broker application, the application developoer 
 
 After one of these methods is invoked in the Space Broker Application, the similar named method (from server.py in the Broker_RaspberryPi folder) in the Space Broker system gets trigerred to deploy any action.   
 
-**Space Broker system (built on raspberry-pi)
+**Space Broker system (built on raspberry-pi)**
 
 The Space Broker system was built on the raspberry-pi. The devices and sensors we used include but not limited to LEDs, Light sensors, cooling fan, temperaure sensors, raspberry-pi camera etc. The implementation of the query, modify, maintain methods can be found in the Broker_RaspberryPi folder named query.py, modify.py and maintain.py respectivel (queryspecific.py, modifyspecific.py, maintainspecific.py for the specific locations) respectively (for the user lcoation). The fucntionalities for the overhead camera can be found from the location.py file. 
 
