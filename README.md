@@ -13,7 +13,7 @@ Currently, we are approaching towards designing the model for Security which wil
 
 # Getting Started
 
-This is the repository which holds code both for the 'Space Broker' API and the Space Broker 'middleware' that was built on the raspberry-pi. 
+This is the repository which holds code both for the 'Space Broker API' and the 'Space Broker System' that was built on the raspberry-pi. 
 To run the Space Broker Server, run main from Broker_RaspberryPi/server.py from the Raspberry-pi.
 
 # Demonstration
