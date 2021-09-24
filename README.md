@@ -41,7 +41,7 @@ After one of these methods is invoked in the Space Broker Application, the simil
 
 Space Broker system (built on raspberry-pi):
 
-
+The Space Broker system was built on the raspberry-pi. The devices and sensors we used include but not limited to LEDs, Light sensors, cooling fan and temperaure sensors etc. The implementation of the query, modify, maintain methods can be found from the    
 # Video Presentation
 
 Following are video links of this project when Space Broker is up and running (we used a red card, as a proxy to the user in the videos, later we shifted that with a green ball which was easy to work with):
