@@ -108,7 +108,7 @@ Following are video links of this project when Space Broker is up and running:
 
 # License
 
-This project is released under the BSD 3-Clause license.
+This project is released under the MIT License.
 
 MIT License
 
