@@ -90,9 +90,6 @@ public class specificLocationActivity extends Activity
             public void onClick(View v)
             {
 
-
-
-
                 String queriedValue = illumination.query(location);  // ****** Calling of query method with SPECIFIC LOCATION ******
 
                 TextView tview = findViewById(R.id.queryvalue);
@@ -106,11 +103,7 @@ public class specificLocationActivity extends Activity
             public void onClick(View v)
             {
 
-
-
-
                 String modifyValue = modifyWithLocationValue.getText().toString();
-
                 illumination.modify(location, modifyValue);
 
             }
@@ -122,11 +115,7 @@ public class specificLocationActivity extends Activity
             public void onClick(View v)
             {
 
-
-
-
                 String maintainValue = maintainWithLocationValue.getText().toString();
-
                 illumination.maintain(location,maintainValue);  // ****** Calling of maintain method with SPECIFIC LOCATION ******
 
             }
