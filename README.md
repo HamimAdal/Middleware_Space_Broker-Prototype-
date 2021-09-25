@@ -48,7 +48,7 @@ In our source code for the Space Broker application, the application developer c
     void maintain (SpecificLocation location,String Value);
     void maintain (UserLocation location,String Value);
 
-After one of these methods is invoked in the Space Broker Application, the similar named method (from server.py in the Broker_RaspberryPi folder) in the Space Broker system gets trigerred to deploy any action.   
+After one of these methods is invoked in the Space Broker Application, the similar named method (from Broker_RaspberryPi/server.py) in the Space Broker system gets trigerred to deploy any action.   
 
 **Space Broker system (built on raspberry-pi)**
 
