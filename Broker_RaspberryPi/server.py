@@ -39,14 +39,10 @@ while True:
                                 break
                  
                         print(data)
-			sp = data[0] + data[1]
-                       
-
-  			data = data [2:]
-                        #print(data)
+			sp = data[0] + data[1]                 
+  			data = data [2:]       
                         temp = data.split(':')
-			print(temp)
-
+			
 			choice = temp[0]
                         
 			if (choice == '1'):
@@ -108,50 +104,15 @@ while True:
     					maintainspecific.maintainspecific(duty_s,x,y)
 				break
 		        
-			if (choice == '7'):
+			if (choice == '4'):
 
     			                                       
                         	with open("floorplan.jpg", "rb") as imageFile:
     					strToSend = base64.b64encode(imageFile.read())       
-
-                                tcpCliSock.sendall(sp+strToSend)
-				
-
-				#print(len(strToSend))
-			   	tcpCliSock,addr = tcpSerSock.accept()
-        			#print '...connected from :', addr
-
-	                        dat = ''
-        	                dat = tcpCliSock.recv(BUFSIZE)
-		                
-                                #print(dat)
-				#print(len(dat))
-                                #res = [int(i) for i in dat.split() if i.isdigit()] 
-				res = int(filter(str.isdigit, dat))
-
-		
-
-                                #print(res)
-				
-                                
-				first = strToSend[res] 
-                                second = strToSend[res+1]
-				#print(first)
-				#print(second)
-                             
-                                strToSend2 = sp+first + second + strToSend 
-                                tcpCliSock.sendall(strToSend2)	
-				
-                           
-				
-    			        #tcpSerSock.close()  
+                                tcpCliSock.sendall(sp+strToSend)										   					                         		 			        
 				break
 			time.sleep(2)
-    			
-                        
-
-
-                        
+    			                                              
         except KeyboardInterrupt:
                 ldr.close()
                 GPIO.cleanup()
