@@ -101,7 +101,7 @@ To initiate user requests regarding Specific Locations, a user needs to enter in
 
 # Video Presentation
 
-Following are video links of this project when Space Broker is up and running (in the videos, we used red card as a proxy to the user, that was later on swirched with green ball which is easy to work with). We suggest to use headphones for a better experience:
+Following are video links of this project when Space Broker is up and running (in the videos, we used a red card as a proxy to the user, that was later on switched with green ball which is easy to work with). For a better experience, we suggest to use headphones to listen to the videos.
 
 ---- https://www.youtube.com/watch?v=-L-g3scnlGY (for specific location)
 
