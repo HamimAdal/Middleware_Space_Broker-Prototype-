@@ -8,16 +8,12 @@ import maintain
 import base64
  
 
-
 from socket import *
 import time
 import RPi.GPIO as GPIO
 
 
-
 ldr.initialize()
-
-
 
 HOST = ''
 PORT = 21567
@@ -39,11 +35,9 @@ while True:
                         data = ''
                         data = tcpCliSock.recv(BUFSIZE)
                        
-
                         if not data:
                                 break
-
-                       
+                 
                         print(data)
 			sp = data[0] + data[1]
                        
@@ -55,55 +49,46 @@ while True:
 
 			choice = temp[0]
                         
-                                         
-
 			if (choice == '1'):
 
     			                                       
                                 x = temp[1] 
                                 y = temp[2]  
                                 
-                                x = int(x)
-                                y = int(y)
-                                	
+				if (x==NULL && y==NULL):
 			
-				queryspecific.query(x,y)
-    				message = str(queryspecific.unitvalue)
+					query.query()
+    					message = str(query.unitvalue)
+                                	        	 
+			        else:	
+                                	x = int(x)
+                                	y = int(y)
+                              		
+					queryspecific.query(x,y)
+    					message = str(queryspecific.unitvalue)
                                 
 				message = sp + message
 				
-                                print(message)
-				tcpCliSock.sendall(message)
-
-                                
-				
-				
-                           
-				
-    			        #tcpSerSock.close()  
+				tcpCliSock.sendall(message) 
 				break
 
  
-    			#time.sleep(2)
-    			
-
-
                         if (choice == '2'):
                           
                                 
                                 x = temp[1] 
                                 y = temp[2]  
-
-                                x = int(x)
-                                y = int(y)
-			
-                                
-                                duty_s = temp[3] 
+				duty_s = temp[3] 
     			        duty_s = int(duty_s)
-
-    				modifyspecific.modify(duty_s,x,y)
-
 				
+				if (x==NULL && y==NULL):
+					
+					modify.modify(duty_s)
+				else:
+                                	x = int(x)
+                                	y = int(y)		                
+    					modifyspecific.modify(duty_s,x,y)
+	
 				break
    		        
                           
@@ -112,50 +97,16 @@ while True:
                                	                                                             
                                 x = temp[1] 
                                 y = temp[2]  
-
-                                x = int(x)
-                                y = int(y)
-
-                                
-                                duty_s = temp[3] 
+				duty_s = temp[3] 
     			        duty_s = int(duty_s)
-
-    				maintainspecific.maintainspecific(duty_s,x,y)
+				
+				if (x==NULL && y==NULL):
+					maintain.maintain(duty_s)
+				else:
+                                	x = int(x)
+                                	y = int(y)
+    					maintainspecific.maintainspecific(duty_s,x,y)
 				break
-
-                        if (choice == '4'):
-
-    			                                       
-                               
-                                	
-			
-				query.query()
-    				message = str(query.unitvalue)
-                                
-                                
-				message = sp + message
-                                
-    				tcpCliSock.sendall(message)
-    			        #tcpSerSock.close()  
-				break
-
-                        if (choice == '5'):
-                          
-                                
-                          
-                                duty_s = temp[3] 
-    			        duty_s = int(duty_s)
-
-    				modify.modify(duty_s)
-				break
-   			 
-
-                        if (choice == '6'):
-                                                             
-                                duty_s = temp[3] 
-    			        duty_s = int(duty_s)
-                                maintain.maintain(duty_s)
-
 		        
 			if (choice == '7'):
 
