@@ -64,7 +64,7 @@ The Space Broker system was built on the raspberry-pi. The devices and sensors w
   </tr>
 </table>
 
-**User Manual**
+**Use Case**
 
 The Home Screen (Figure 1) has two different options: the ‘User Location’ button and the ‘Specific Location’ button.
 Clicking on the ‘User Location’ button in the Home Screen will take the user into the User Location Screen, where he/she will be able to query, modify or maintain the value of the illumination at his/her location. Querying the value of illumination requires the user to press the ‘Query with user location’ button, and as a response, the queried result gets displayed on the screen. But requesting to modify or maintain illumination at the user location requires the user to provide the desired value in the input fields before pressing the corresponding buttons assigned for it. For each of the methods, the user location is continuously retrieved from the overhead camera.
@@ -99,7 +99,7 @@ To initiate  user requests regarding Specific Locations, a user needs to enter i
 
 # Video Presentation
 
-Following are video links of this project when Space Broker is up and running:
+Following are video links of this project when Space Broker is up and running (use headphone for better experience):
 
 ---- https://www.youtube.com/watch?v=-L-g3scnlGY (for specific location)
 
