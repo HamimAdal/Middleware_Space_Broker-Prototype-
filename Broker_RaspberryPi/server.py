@@ -51,7 +51,7 @@ while True:
                                 x = temp[1] 
                                 y = temp[2]  
                                 
-				if (x==NULL && y==NULL):
+				if (x == 'NULL' && y == 'NULL'):
 			
 					query.query()
     					message = str(query.unitvalue)
@@ -77,7 +77,7 @@ while True:
 				duty_s = temp[3] 
     			        duty_s = int(duty_s)
 				
-				if (x==NULL && y==NULL):
+				if (x == 'NULL' && y == 'NULL'):
 					
 					modify.modify(duty_s)
 				else:
@@ -96,7 +96,7 @@ while True:
 				duty_s = temp[3] 
     			        duty_s = int(duty_s)
 				
-				if (x==NULL && y==NULL):
+				if (x == 'NULL' && y == 'NULL'):
 					maintain.maintain(duty_s)
 				else:
                                 	x = int(x)
