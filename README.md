@@ -14,11 +14,9 @@ Currently, we are approaching towards designing the model for Security which wil
 # Getting Started
 
 This is the repository which holds code both for the 'Space Broker API' and the 'Space Broker System' that was built on the raspberry-pi. 
-To run the Space Broker Server, run main from Broker_RaspberryPi/server.py from the Raspberry-pi.
+To run the Space Broker Server, run main from Broker_RaspberryPi/server.py from the Raspberry-pi. After the Space Broker server is up and running, it is ready to take any command from the Space Broker application.
 
-# How It Works
-
-After the Space Broker server is up and running, it is ready to take any command from the Space Broker application.
+# Project Demonstaration
 
 **Space Broker API**
 
@@ -66,7 +64,8 @@ The Space Broker system was built on the raspberry-pi. The devices and sensors w
   </tr>
 </table>
 
-# Use Case Demonstration
+**Use Case Demonstration**
+
 The Home Screen (Figure 1) has two different options: the ‘User Location’ button and the ‘Specific Location’ button.
 Clicking on the ‘User Location’ button in the Home Screen will take the user into the User Location Screen, where he/she will be able to query, modify or maintain the value of the illumination at his/her location. Querying the value of illumination requires the user to press the ‘Query with user location’ button, and as a response, the queried result gets displayed on the screen. But requesting to modify or maintain illumination at the user location requires the user to provide the desired value in the input fields before pressing the corresponding buttons assigned for it. For each of the methods, the user location is continuously retrieved from the overhead camera.
 
