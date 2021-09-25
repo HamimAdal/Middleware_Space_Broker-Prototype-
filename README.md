@@ -36,15 +36,9 @@ An overhead camera was used to track a red card (an alternate to the real user, 
 
 In our source code for the Space Broker application, the application developer can use any of the following methods (from Android_Application/app/src/main/java/com/example/illuminationmodify/spaceBrokerProxy.java) to make a request to the Space Broker system (built on raspberry-pi):
 
-
-    String query (SpecificLocation  location);
-    String query (UserLocation location);
-
-    void modify (SpecificLocation location,String Value);
-    void modify (UserLocation location,String Value);
-
-    void maintain (SpecificLocation location,String Value);
-    void maintain (UserLocation location,String Value);
+    String query(Location  location);
+    void modify(Location location,String Value);
+    void maintain(Location location,String Value);
 
 After one of these methods is invoked in the Space Broker Application, the similar named method (from Broker_RaspberryPi/server.py) in the Space Broker system gets trigerred to deploy any action.   
 
