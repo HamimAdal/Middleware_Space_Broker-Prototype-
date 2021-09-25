@@ -22,7 +22,7 @@ To run the Space Broker Server, run main from Broker_RaspberryPi/server.py from 
 
 So far three kind of methods have been examined: query, modify and maintain. All the methods have been tested for both Specific Location and User Location. 
 
-An overhead camera was used to track a red card (an alternate to the real user, later we swapped that with a green ball which was easy to work with; the updated code will be uploaded soon), which is our proxy for the user in the small scaled environment. So, the overhead camera feeds the space broker with the user location. For the user to point to any speciofic location, he/she has to download a map (floor plan), which is the 2D top view of the floor plan captured also by the overhead camera. By clciking on the floorplan, a user can spot any location.
+An overhead camera was used to track a red card (an alternate to the real user, later we swapped that with a green ball which was easy to work with; the updated code for the Space Broker System will be uploaded soon), which is our proxy for the user in the small scaled environment. So, the overhead camera feeds the space broker with the user location. For the user to point to any speciofic location, he/she has to download a map (floor plan), which is the 2D top view of the floor plan captured also by the overhead camera. By clciking on the floorplan, a user can spot any location.
 
 <table>
   <tr>
