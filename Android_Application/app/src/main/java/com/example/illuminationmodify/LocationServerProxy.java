@@ -10,27 +10,21 @@ import android.view.View;
 import android.widget.ImageView;
 
 
-
-
 interface floorPlanInterface
 {
     String returnSpaceImage( );
 
 }
 
-interface SpecificLocationInterface
+interface LocationInterface
 {
 
     String getSpecificLocation(View view, MotionEvent event);
-
-}
-
-interface UserLocationInterface
-{
-
     void getUserLocation();
 
 }
+
+
 
 
 
@@ -49,7 +43,7 @@ class floorPlan implements floorPlanInterface
     {
 
 
-        requestSpaceImage = "7" + ":" + "NULLVALUE" ;
+        requestSpaceImage = "4" + ":" + "NULLVALUE" ;
 
         spaceImage SpaceImage = new spaceImage();
         SpaceImage.execute(requestSpaceImage);
@@ -63,23 +57,16 @@ class floorPlan implements floorPlanInterface
             e.printStackTrace();
         }
 
-        String queriedSpaceImage= SpaceImage.ko1;
+        String queriedSpaceImage= SpaceImage.k1;
 
         return queriedSpaceImage;
 
     }
 
 
-    // *******************************************
-    // The following method is for providing Location coordinates from the user by touching pixel on the Space Image
-    // *******************************************
-
-
-
-
 }
 
-class SpecificLocation implements SpecificLocationInterface
+class Location implements LocationInterface
 {
 
     String X,Y;
@@ -121,23 +108,11 @@ class SpecificLocation implements SpecificLocationInterface
         return coordinate;
 
 
-
-
-
     }
 
-
-
-
-}
-
-class UserLocation implements UserLocationInterface
-{
-
-    String X,Y;
-
-
-
+    // *******************************************
+    // The following method is for providing user location. As the user location is retrieved from the raspberry-pi's end, we are sending null values here.
+    // *******************************************
     public void getUserLocation()
     {
 
@@ -146,8 +121,9 @@ class UserLocation implements UserLocationInterface
 
     }
 
-
 }
+
+
 
 
 

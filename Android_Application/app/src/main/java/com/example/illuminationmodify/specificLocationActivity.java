@@ -22,7 +22,7 @@ public class specificLocationActivity extends Activity
     Characteristics illumination = new Characteristics();
 
     floorPlan floorPlanImage= new floorPlan();
-    SpecificLocation location= new SpecificLocation();
+    Location location= new Location();
 
 
     Button btnSpace;

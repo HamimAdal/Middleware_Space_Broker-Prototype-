@@ -1,44 +1,33 @@
 package com.example.illuminationmodify;
 
 
-
-interface characteristicsInterface
+interface characteristicsInterface // Space Broker API methods
 {
-    String query( SpecificLocation  location );
-    String query(  UserLocation location );
-
-    void modify( SpecificLocation location,String Value);
-    void modify(  UserLocation location,String Value);
-
-    void maintain( SpecificLocation location,String Value);
-    void maintain(  UserLocation location,String Value);
-
-
+    String query(Location  location);
+    void modify(Location location,String Value);
+    void maintain(Location location,String Value);
 }
 
 class Characteristics   implements characteristicsInterface
 {
+    public static String requestId ;
+    public static String STS;
     // *****************
-    // 'string_message' is the string or message which will be sent  to the space broker from the application which consists
-    // 1. requestType and/or
-    // 2. location and/or
-    // 3. value
+    // STS is the string or message which will be sent to the space broker (raspberry-pi) from the application which concatenates-
+    //      1. requestId and/or,
+    //      2. location and/or,
+    //      3. value.
     // *****************
-
-    public static String requestType ;
-    public static String string_message;
     String queriedValue= "";
 
-
     @Override
-    public String query( SpecificLocation location )  // ****** implementation of query method at Specific Location******
+    public String query( Location location )  // implementation of query method
     {
+        requestId = "1";
 
-        requestType = "1";
-
-        string_message = requestType + ":" + location.X + ":" + location.Y ;
-        wirelessCommunication wirelesscommunication = new wirelessCommunication();
-        wirelesscommunication.execute(string_message);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
+        STS = requestId + ":" + location.X + ":" + location.Y ;
+        wirelessCommunication wireless = new wirelessCommunication();
+        wireless.execute(STS);  // sending a string to the Space Broker (raspberry-pi) which includes requestId (for query) and location.
 
         try
         {
@@ -51,93 +40,28 @@ class Characteristics   implements characteristicsInterface
         }
 
 
-        queriedValue = wirelesscommunication.k;
+        queriedValue = wireless.k;
         return queriedValue;
-
-    }
-    @Override
-    public String query(  UserLocation location )  // ****** implementation of query method at User Location******
-    {
-
-        requestType = "4";
-
-        string_message = requestType + ":" + location.X + ":" + location.Y ;
-        wirelessCommunication wirelesscommunication = new wirelessCommunication();
-        wirelesscommunication.execute(string_message);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
-
-        try
-        {
-            Thread.sleep(5000);
-        }
-        catch (InterruptedException e)
-
-        {
-            e.printStackTrace();
-        }
-
-
-        queriedValue = wirelesscommunication.k;
-        return queriedValue;
-
     }
 
     @Override
-    public void modify( SpecificLocation location,String Value)  // ****** implementation of modify method at Specific Location ******
+    public void modify( Location location,String Value)  //implementation of modify method
     {
+        requestId = "2";
 
-        requestType = "2";
-
-        string_message = requestType + ":" + location.X + ":" + location.Y + ":" + Value;
-        wirelessCommunication wirelesscommunication = new wirelessCommunication();
-        wirelesscommunication.execute(string_message);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
-
-
-
-
-
+        STS = requestId + ":" + location.X + ":" + location.Y + ":" + Value;
+        wirelessCommunication wireless = new wirelessCommunication();
+        wireless.execute(STS);  //sending a string to the Space Broker (raspberry-pi) which includes requestId (for modify), location and the value to be modified.
     }
 
     @Override
-    public void modify(  UserLocation location,String Value)  // ****** implementation of modify method at User Location ******
+    public void maintain( Location location,String Value)  // implementation of maintain method
     {
-
-
-        requestType = "5";
-
-        string_message = requestType + ":" + location.X + ":" + location.Y + ":" + Value;
-        wirelessCommunication wirelesscommunication = new wirelessCommunication();
-        wirelesscommunication.execute(string_message);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
-
+        requestId = "3";
+        STS = requestId + ":" + location.X + ":" + location.Y + ":" + Value;
+        wirelessCommunication wireless = new wirelessCommunication();
+        wireless.execute(STS);  //sending a string to the Space Broker (raspberry-pi) which includes requestId (for maintain), location and the value to be maintained.
     }
-
-
-    @Override
-    public void maintain( SpecificLocation location,String Value)  // implementation of maintain method at Specific Location
-    {
-
-
-        requestType = "3";
-
-        string_message = requestType + ":" + location.X + ":" + location.Y + ":" + Value;
-        wirelessCommunication wirelesscommunication = new wirelessCommunication();
-        wirelesscommunication.execute(string_message);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
-
-    }
-
-    @Override
-    public void maintain(  UserLocation location,String Value)  // implementation of maintain method at User Location
-    {
-
-
-        requestType = "6";
-
-        string_message = requestType + ":" + location.X + ":" + location.Y + ":" + Value;
-        wirelessCommunication wirelesscommunication = new wirelessCommunication();
-        wirelesscommunication.execute(string_message);  // ****** wireless communication between app and raspberry pi (Space Broker) ******
-
-    }
-
-
 
 }
 

@@ -13,7 +13,7 @@ public class userLocationActivity extends AppCompatActivity
 {
 
     Characteristics illumination = new Characteristics();
-    UserLocation location= new UserLocation();
+    Location location= new Location();
 
 
     Button btnQueryUserLocation;
