@@ -1,6 +1,6 @@
 # Middleware_Space_Broker
 
-Space Broker is a middleware that  works as a mediator between personal devices and physical IoT devices in a smart space to make the user experience more personalized. So far, the following tasks were accomplished:
+Space Broker is a middleware that works as a mediator between personal devices and physical IoT devices in a smart space to make the user experience more personalized. So far, the following tasks were accomplished:
 
 ---- We made a demonstration in a small-scale IoT environment (using foam core) based on the framework we have designed. We named the framework 'Space Broker'.
 
@@ -9,7 +9,7 @@ Currently, we are approaching towards designing the model for Security which wil
 
 ---- An android device was used as a personal device to facilitate our experiment so that a user can have a similar experience interacting with space when he/she is in a real IoT environment. 
 
----- The task of building the interface 'Space Broker', was accomplished on the Raspberry-pi where LEDs, sensors, cooling fans and other equipments were used as an alternative to real physical devices.
+---- The task of building the interface 'Space Broker', was accomplished on the Raspberry-pi where LEDs, sensors, cooling fans and other equipment were used as an alternative to real physical devices.
 
 # Getting Started
 
@@ -20,7 +20,7 @@ To run the Space Broker Server, run main from Broker_RaspberryPi/server.py from 
 
 **Space Broker API**
 
-So far three kind of methods have been examined: query, modify and maintain. All the methods have been tested for both Specific Location and User Location. 
+So far, three kinds of methods have been examined: query, modify and maintain. All the methods have been tested for both Specific Location and User Location. 
 
 In our source code for the Space Broker application, the application developer can use any of the following methods (from Android_Application/app/src/main/java/com/example/illuminationmodify/spaceBrokerProxy.java) to make a request to the Space Broker system (built on raspberry-pi):
 
@@ -28,7 +28,7 @@ In our source code for the Space Broker application, the application developer c
     void modify(Location location,String Value);
     void maintain(Location location,String Value);
 
-After one of these methods is invoked in the Space Broker Application, the similar named method (from Broker_RaspberryPi/server.py) in the Space Broker system gets trigerred to deploy any action. 
+After one of these methods is invoked in the Space Broker Application, the similarly named method (from Broker_RaspberryPi/server.py) in the Space Broker system gets triggered  to deploy any action. 
 
 <table>
   <tr>
@@ -44,9 +44,9 @@ After one of these methods is invoked in the Space Broker Application, the simil
 
 **Space Broker system (built on raspberry-pi)**
 
-An overhead camera was used to track a green ball (an alternate to the real user, previously we used a red card that has been currently swapped with the green ball which is easy to work with; the updated code for the Space Broker System will be uploaded soon), which is our proxy for the user in the small scaled environment. So, the overhead camera feeds the space broker with the user location. For the user to point to any speciofic location, he/she has to download a map (floor plan), which is the 2D top view of the floor plan captured also by the overhead camera. By clciking on the floorplan, a user can spot any location.
+An overhead camera was used to track a green ball (an alternate to the real user, previously we used a red card that has been currently swapped with the green ball which is easy to work with; the updated code for the Space Broker System will be uploaded soon), which is our proxy for the user in the small-scaled environment. So, the overhead camera feeds the space broker with the user location. For the user to point to any speciofic location, he/she has to download a map (floor plan), which is the 2D top view of the floor plan also captured by the overhead camera. By clicking on the floorplan, a user can spot any location.
 
-The Space Broker system was built on the raspberry-pi. The devices and sensors we used include but not limited to LEDs, Light sensors, cooling fan, temperaure sensors, raspberry-pi camera etc. The implementation of the query, modify and maintain methods can be found in the Broker_RaspberryPi/query.py, Broker_RaspberryPi/modify.py and Broker_RaspberryPi/maintain.py  (Broker_RaspberryPi/queryspecific.py, Broker_RaspberryPi/modifyspecific.py, Broker_RaspberryPi/maintainspecific.py for the specific locations) respectively (for the user lcoation). The fucntionalities for the overhead camera can be found in the Broker_RaspberryPi/location.py file. 
+The Space Broker system was built on the raspberry-pi. The devices and sensors we used include but are not limited to LEDs, Light sensors, cooling fans, temperature sensors, raspberry-pi cameras, etc. The implementation of the query, modify and maintain methods can be found in the Broker_RaspberryPi/query.py, Broker_RaspberryPi/modify.py and Broker_RaspberryPi/maintain.py  (Broker_RaspberryPi/queryspecific.py, Broker_RaspberryPi/modifyspecific.py, Broker_RaspberryPi/maintainspecific.py for the specific locations) respectively (for the user lcoation). The functionalities for the overhead camera can be found in the Broker_RaspberryPi/location.py file. 
 
 <table>
   <tr>
@@ -67,7 +67,7 @@ Clicking on the ‘User Location’ button in the Home Screen will take the user
 
 **Space Settings**
 
-Figure 4 and 5 demonstrates a use case scenario illustrating what happens when a user uses the Space Broker Application to launch a request at his/her location. The size of the camera frame shown in the figure is approximately 500 × 480 grid. To keep things simple, the entire space was divided  into four regions: Space 1, Space 2, Space 3, and Space 4. The following table provides the inkling of the space partitions along with LED devices and LDR sensors associated with each region. For a better understanding, we can relate the environment setup with Figure 2, which provides the architectural layout of the floor plan labeling each component used in the experiment along with the space split-ups.
+Figure 4 and 5 demonstrate a use case scenario illustrating what happens when a user uses the Space Broker Application to launch a request at his/her location. The size of the camera frame shown in the figure is approximately 500 × 480 grid. To keep things simple, the entire space was divided into four regions: Space 1, Space 2, Space 3, and Space 4. The following table provides the inkling of the space partitions along with LED devices and LDR sensors associated with each region. For a better understanding, we can relate the environment setup with Figure 2, which provides the architectural layout of the floor plan labeling each component used in the experiment along with the space split-ups.
 
 | Region | Space Coverage (x,y denotes horizontal and vertical pixels of the camera frame) |Assigned devices |
 | :---: | :---: | :---: |
@@ -90,18 +90,18 @@ When the user is in Space 1, the LED1, LED2, and LDR1 become operational and att
   </tr>
 </table>
 
-**Use Case Demonstartion with User Location**
+**Use Case Demonstration with User Location**
 
-We will now use Figure 4 and 5 to manifest an interaction between the user and the Space Broker where a user asks the Space Broker to modify illumination at his/her location. Suppose a user (the green ball) desires to achieve 850 units of illumination at his/her user location. The overhead camera detects the green ball avatar in Space 4 (X= 454, Y= 84, which falls in the Space 4 region).  When a user puts the value of 850 as an input in the User Location Screen and presses the ‘Modify With User Location’ button, the value gets passed from the application to the Space Broker (via invoking the proxy method, in this case ‘modify’ method), setting off the identically named method in the Space Broker. As a result, LED7 and LED8 become functional in Space 4 (in Figure 4), attempting to reach the target of 850 units of illumination. In Figure 5, we can see that the intended amount of 850 units has been achieved when LED7 is at its maximum capacity (100 unit), and LED8  reaches the value of 90 unit. Querying and maintaining an illumination level is also achieved in the same way with an exception for the maintenance request, where the application has to continuously feed the Space Broker with user’s current position in order to maintain a constant luminance level around him/her.
+We will now use Figure 4 and 5 to manifest an interaction between the user and the Space Broker where a user asks the Space Broker to modify illumination at his/her location. Suppose a user (the green ball) desires to achieve 850 units of illumination at his/her user location. The overhead camera detects the green ball avatar in Space 4 (X= 454, Y= 84, which falls in the Space 4 region).  When a user puts the value of 850 as an input in the User Location Screen and presses the ‘Modify With User Location’ button, the value gets passed from the application to the Space Broker (via invoking the proxy method, in this case, ‘modify’ method), setting off the identically named method in the Space Broker. As a result, LED7 and LED8 become functional in Space 4 (in Figure 4), attempting to reach the target of 850 units of illumination. In Figure 5, we can see that the intended amount of 850 units has been achieved when LED7 is at its maximum capacity (100 units), and LED8  reaches the value of 90 units. Querying and maintaining an illumination level is also achieved in the same way with an exception for the maintenance request, where the application has to continuously feed the Space Broker with user’s current position in order to maintain a constant luminance level around him/her.
 
 **Use Case Demonstration with Specific Location**
 
-To initiate  user requests regarding Specific Locations, a user needs to enter into the Specific Location Screen by pressing the ‘Specific Location’ button from the Home Screen. In the Specific Location Screen, a user can request to display the top view image of the 2D space by pressing the ‘Show the Space’ button. By tapping on the space image displayed, a user will be able to set the location which he/she wants to query, modify, or maintain a value for illumination. After selecting the desired spot (for example, X=349, Y=118 as shown in Figure 1) from the space image, a user needs to provide values in the corresponding input fields before pressing the designated buttons assigned for modifying or maintaining illumination. Querying for illumination only requires the user to press the ‘Query With Specific Location’ button, and as a consequence, the queried value is displayed on the screen.
+To initiate user requests regarding Specific Locations, a user needs to enter into the Specific Location Screen by pressing the ‘Specific Location’ button from the Home Screen. In the Specific Location Screen, a user can request to display the top view image of the 2D space by pressing the ‘Show the Space’ button. By tapping on the space image displayed, a user will be able to set the location which he/she wants to query, modify, or maintain a value for illumination. After selecting the desired spot (for example, X=349, Y=118 as shown in Figure 1) from the space image, a user needs to provide values in the corresponding input fields before pressing the designated buttons assigned for modifying or maintaining illumination. Querying for illumination only requires the user to press the ‘Query With Specific Location’ button, and as a consequence, the queried value is displayed on the screen.
 
 
 # Video Presentation
 
-Following are video links of this project when Space Broker is up and running (use headphone for better experience):
+Following are video links of this project when Space Broker is up and running (use headphones for a better experience):
 
 ---- https://www.youtube.com/watch?v=-L-g3scnlGY (for specific location)
 
