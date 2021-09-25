@@ -22,7 +22,13 @@ To run the Space Broker Server, run main from Broker_RaspberryPi/server.py from 
 
 So far three kind of methods have been examined: query, modify and maintain. All the methods have been tested for both Specific Location and User Location. 
 
-An overhead camera was used to track a red card (an alternate to the real user, later we swapped that with a green ball which was easy to work with; the updated code for the Space Broker System will be uploaded soon), which is our proxy for the user in the small scaled environment. So, the overhead camera feeds the space broker with the user location. For the user to point to any speciofic location, he/she has to download a map (floor plan), which is the 2D top view of the floor plan captured also by the overhead camera. By clciking on the floorplan, a user can spot any location.
+In our source code for the Space Broker application, the application developer can use any of the following methods (from Android_Application/app/src/main/java/com/example/illuminationmodify/spaceBrokerProxy.java) to make a request to the Space Broker system (built on raspberry-pi):
+
+    String query(Location  location);
+    void modify(Location location,String Value);
+    void maintain(Location location,String Value);
+
+After one of these methods is invoked in the Space Broker Application, the similar named method (from Broker_RaspberryPi/server.py) in the Space Broker system gets trigerred to deploy any action. 
 
 <table>
   <tr>
@@ -34,15 +40,11 @@ An overhead camera was used to track a red card (an alternate to the real user, 
 </table>
 
 
-In our source code for the Space Broker application, the application developer can use any of the following methods (from Android_Application/app/src/main/java/com/example/illuminationmodify/spaceBrokerProxy.java) to make a request to the Space Broker system (built on raspberry-pi):
-
-    String query(Location  location);
-    void modify(Location location,String Value);
-    void maintain(Location location,String Value);
-
-After one of these methods is invoked in the Space Broker Application, the similar named method (from Broker_RaspberryPi/server.py) in the Space Broker system gets trigerred to deploy any action.   
+  
 
 **Space Broker system (built on raspberry-pi)**
+
+An overhead camera was used to track a red card (an alternate to the real user, later we swapped that with a green ball which was easy to work with; the updated code for the Space Broker System will be uploaded soon), which is our proxy for the user in the small scaled environment. So, the overhead camera feeds the space broker with the user location. For the user to point to any speciofic location, he/she has to download a map (floor plan), which is the 2D top view of the floor plan captured also by the overhead camera. By clciking on the floorplan, a user can spot any location.
 
 The Space Broker system was built on the raspberry-pi. The devices and sensors we used include but not limited to LEDs, Light sensors, cooling fan, temperaure sensors, raspberry-pi camera etc. The implementation of the query, modify and maintain methods can be found in the Broker_RaspberryPi/query.py, Broker_RaspberryPi/modify.py and Broker_RaspberryPi/maintain.py  (Broker_RaspberryPi/queryspecific.py, Broker_RaspberryPi/modifyspecific.py, Broker_RaspberryPi/maintainspecific.py for the specific locations) respectively (for the user lcoation). The fucntionalities for the overhead camera can be found in the Broker_RaspberryPi/location.py file. 
 
