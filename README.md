@@ -3,7 +3,9 @@
 **Working Environment.**
 
 -- Software/Microcontroller: Android Studio, Raspberry Pi.
+
 -- Programming: Python, Java
+
 -- Libraries: OpenCV, NumPy
 
 Space Broker is a middleware that works as a mediator between personal devices and physical IoT devices in a smart space to make the user experience more personalized. So far, the following tasks were accomplished:
