@@ -2,11 +2,11 @@
 
 **Working Environment.**
 
--- Software/Microcontroller: Android Studio, Raspberry Pi.
+-- **Software/Microcontroller**: Android Studio, Raspberry Pi.
 
--- Programming: Python, Java
+-- **Programming**: Python, Java
 
--- Libraries: OpenCV, NumPy
+-- **Libraries**: OpenCV, NumPy
 
 
 **Getting Started.**
