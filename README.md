@@ -8,7 +8,7 @@
 
 -- Libraries: OpenCV, NumPy
 
-**Getting Started**
+# Getting Started.
 
 Space Broker is a middleware that works as a mediator between personal devices and physical IoT devices in a smart space to make the user experience more personalized. So far, the following tasks were accomplished:
 
