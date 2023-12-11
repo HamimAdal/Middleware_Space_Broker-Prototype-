@@ -2,7 +2,7 @@
 
 Space Broker is a middleware that works as a mediator between personal devices and physical IoT devices in a smart space to make the user experience more personalized. So far, the following tasks were accomplished:
 
----- We made a demonstration in a small-scale IoT environment (using foam core) based on the framework we have designed. We named the framework 'Space Broker'.
+---- We developed a prototype in a small-scale IoT environment (using foam core) based on the middleware we designed (Space Broker).
 
 ---- Two <i><a href="https://github.com/HamimAdal/Spatial-Characteristics"> Spatial Characteristics</a></i> that include illumination and temperature have been tested in a limited-scaled IoT environment. 
 Currently, we are approaching towards designing the model for Security which will be implemented in the future.
